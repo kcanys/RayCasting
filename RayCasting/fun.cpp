@@ -38,8 +38,8 @@ void spawnWalls(sf::Vertex walls[][2])
 {
     for (int i = 0; i < 10; i++)
     {
-        walls[i][0].position = sf::Vector2f(rand() % 800, rand() % 800);
-        walls[i][1].position = sf::Vector2f(rand() % 800, rand() % 800);
+        walls[i][0].position = sf::Vector2f(rand() % 1200, rand() % 900);
+        walls[i][1].position = sf::Vector2f(rand() % 1200, rand() % 900);
     }
     printf("Randomizing walls done.\n");
 }

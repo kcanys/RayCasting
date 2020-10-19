@@ -7,12 +7,12 @@ private:
     float x;
     float y;
 public:
-    Ray rays[360];
+    Ray rays[720];
     //Constructor
     Pt(int size, sf::RenderWindow* window);
 
     void posUpdate(sf::RenderWindow* window);
 
-    void drawRay(sf::RenderWindow* window, sf::Vertex walls[][2]);
+    void drawRay(sf::RenderWindow* window, sf::Vertex walls[][2], float size);
 };
 

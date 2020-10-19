@@ -14,6 +14,6 @@ public:
     Ray(float x, float y, float angle);
     void drawRay(sf::RenderWindow* window);
 
-    void updateRay(float x, float y, float angle);
+    void updateRay(float x, float y, float angle, float size);
 };
 

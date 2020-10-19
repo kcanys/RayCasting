@@ -5,7 +5,7 @@ Pt::Pt(int size, sf::RenderWindow* window) {
     this->y = 0.f;
     setRadius(size);
     setFillColor(sf::Color(255, 255, 255, 127));
-    for (int i = 0; i < 360; i++)
+    for (int i = 0; i < 720; i++)
     {
         rays[i] = Ray(this->x, this->y, (float)i);
     }
@@ -20,11 +20,11 @@ void Pt::posUpdate(sf::RenderWindow* window)
     window->draw(*this);
 }
 
-void Pt::drawRay(sf::RenderWindow* window, sf::Vertex walls[][2]) {
+void Pt::drawRay(sf::RenderWindow* window, sf::Vertex walls[][2], float size) {
     int xVal = this->x, yVal = this->y;
-    for (int i = 0; i < 360; i++)
+    for (int i = 0; i < 720; i++)
     {
-        rays[i].updateRay(xVal, yVal, i);
+        rays[i].updateRay(xVal, yVal, i/2.0, size);
         for (int j = 0; j < 10; j++)
         {
             if (check(walls[j], rays[i].line) != sf::Vector2f(-1, -1))
