@@ -6,4 +6,4 @@ Setup SFML for yourself, and for FPS counter you have to include font file.
 
 Randomizing walls - space <br>
 Ray +size - Up key <br>
-Ray -size - Up key <br>
+Ray -size - Down key <br>
